@@ -5,11 +5,15 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "ws-server": "node /WebSocket/index.js",
+    "dev": "concurrently --kill-others \"npm run serve\" \"npm run ws-server\""
   },
   "dependencies": {
     "core-js": "^3.4.3",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "monaco-editor-vue": "^1.0.9",
+    "vue-monaco": "^1.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
@@ -18,7 +22,8 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "monaco-editor-webpack-plugin": "^1.7.0"
   },
   "eslintConfig": {
     "root": true,
