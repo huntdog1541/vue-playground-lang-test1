@@ -36,12 +36,13 @@
             onSubmit() {
                 // eslint-disable-next-line no-console
                 console.log("Submitting: " + this.code);
+                this.$socket.send(JSON.stringify(this.code));
             },
             logging(message) {
                 // eslint-disable-next-line no-console
                 console.log(message);
             },
-            webSocketOpen(event) {
+            /*webSocketOpen(event) {
                 this.logging('Connection Opened');
                 this.logging(event);
                 let mess = {type: 'intro'};
@@ -52,15 +53,15 @@
             },
             webSocketSend(data) {
                 this.webSocket.send(JSON.stringify(data));
-            }
+            }*/
         },
         mounted: function openWebSocket() {
-            let address = 'ws://' + window.location.hostname + ':4332';
+            /*let address = 'ws://' + window.location.hostname + ':4332';
             this.logging('Address: ' + address);
 
             this.webSocket = new WebSocket(address);
             this.webSocket.addEventListener('open', this.webSocketOpen(event));
-            this.webSocket.addEventListener('message', this.webSocketMessage(event));
+            this.webSocket.addEventListener('message', this.webSocketMessage(event));*/
 
         }
     };
