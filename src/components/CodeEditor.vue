@@ -25,7 +25,7 @@
                     lineNumbers: "on"
                 },
                 language: "JavaScript",
-                code: "console.log('Hello, World!);"
+                code: "console.log('Hello, World!');"
             }
         },
         methods: {

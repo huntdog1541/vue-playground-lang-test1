@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import store from './store'
+import store from './store/store'
 import VueNativeSocket from 'vue-native-websocket';
 import {
   SOCKET_ONOPEN,
